@@ -1,0 +1,31 @@
+{
+  "name": "grunt-inline-yytemp",
+  "version": "1.0.2",
+  "description": "Inject external temp to your js",
+  "author": {
+    "name": "ganxietx",
+    "email": "303182519@qq.com"
+  },
+  "keywords": [
+    "gruntplugin",
+    "grunt",
+    "js"
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "devDependencies": {
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-jshint": "~0.8.0",
+    "grunt-contrib-nodeunit": "~0.3.0",
+    "grunt": "~0.4.2",
+    "jshint-stylish": "~0.1.5",
+    "load-grunt-tasks": "~0.3.0"
+  },
+  "dependencies": {
+    "underscore": "~1.6.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  }
+}
