@@ -66,6 +66,10 @@ Set true to see more logs about what is happenning.
 
 	var test=__inline("./temp.js");
 
+	读取外链模板文件__inline("./index.js")
+    读取内联模板__inlineTemp('<div><%=ddd%></div>');
+    
+
 
 
 ## Release History

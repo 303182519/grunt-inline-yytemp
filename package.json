@@ -1,6 +1,6 @@
 {
   "name": "grunt-inline-yytemp",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Inject external temp to your js",
   "author": {
     "name": "ganxietx",
