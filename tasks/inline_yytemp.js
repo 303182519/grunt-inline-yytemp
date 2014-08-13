@@ -57,22 +57,21 @@ module.exports = function (grunt) {
             })
 
 
-            //读取内联模板__inlineTemp('<div><%=ddd%></div>');
-            var html=html.replace(/__inlineTemp\([\'\"](.*)[\'\"]\)/g,function(match, jsTemp){
-                if(jsTemp.indexOf('<%')!=-1){
-                        var content =jsTemp
-                            .split('\\n')
-                            .map(function (line) {return line.trim();})
-                            .join('')
-                            .replace(/\"/gi, '\\\"')
-                            .replace(/\'/gi, '\\\'')
-                            .trim();
+             //读取内联模板__inlineTemp('<div><%=ddd%></div>');
+              var html=html.replace(/__inlineTemp\([\'\"](.*)[\'\"]\)/g,function(match, jsTemp){
 
-                        var jsTemp = _.template(content).source;
-                    }      
-               return jsTemp;  
+                  var content =jsTemp
+                      .split('\\n')
+                      .map(function (line) {return line.trim();})
+                      .join('')
+                      .replace(/\\/gi, '')
+                      .trim();
 
-            })
+                  var jsTemp = _.template(content).source;
+
+                  return jsTemp;
+
+              })
 
 
             //替换函数
