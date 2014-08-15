@@ -61,11 +61,12 @@ module.exports = function (grunt) {
               var html=html.replace(/__inlineTemp\([\'\"](.*)[\'\"]\)/g,function(match, jsTemp){
 
                   var content =jsTemp
-                      .split('\\n')
-                      .map(function (line) {return line.trim();})
-                      .join('')
-                      .replace(/\\/gi, '')
-                      .trim();
+                        .split('\\n')
+                        .map(function (line) {return line.trim();})
+                        .join('')
+                        .replace(/\\'/g, "'")
+                        .replace(/\\"/g, '"')
+                        .trim();
 
                   var jsTemp = _.template(content).source;
 
